@@ -31,5 +31,5 @@ data <- cbind2(c(sj, activity), x)
 data_summarise <- data %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 
 # Export data
-write.csv(data, file = "data.csv")
-write.csv(data_summarise, file= "data_summarise.csv")
+write.table(data, file = "data.txt", row.names = FALSE)
+write.table(data_summarise, file= "data_summarise.txt", row.names = FALSE)
